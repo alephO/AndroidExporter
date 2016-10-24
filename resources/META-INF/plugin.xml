@@ -1,0 +1,40 @@
+<idea-plugin version="2">
+  <id>me.aleph0.androidexporter</id>
+  <name>Android Project Exporter</name>
+  <version>0.0.1</version>
+  <vendor email="card.aleph1@gmail.com" url="http://www.yourcompany.com">Jialong Chen</vendor>
+
+  <description><![CDATA[
+      Use this to export your homework.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      It is the first version!<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="HWExporter.ExportMainMenu" text="H_omework" description="Homework Exporter">
+      <add-to-group group-id="MainMenu" anchor="last"  />
+        <action id="HWExporter.Export" class="me.aleph0.androidexporter.ExportAction" text="_Export for submission"
+            description="Export your homework for submission">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl E"/>
+    </action>
+    </group>
+  </actions>
+
+</idea-plugin>
