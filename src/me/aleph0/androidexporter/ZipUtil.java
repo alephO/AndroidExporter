@@ -41,7 +41,7 @@ public class ZipUtil {
                     in.close();
                 }
             }
-            ZipEntry zipEntry = new ZipEntry("etc"+File.separator+"log"+File.separator+"compress.log");
+            ZipEntry zipEntry = new ZipEntry(new File(src).getName()+File.separator+"etc"+File.separator+"log"+File.separator+"compress.log");
             zos.putNextEntry(zipEntry);
             byte[] data = log.toString().getBytes();
             zos.write(data, 0, data.length);

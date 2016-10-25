@@ -66,6 +66,7 @@ public class MyDialogWrapper extends DialogWrapper {
         label4.setFont(new Font(curfont.getName(),Font.BOLD,curfont.getSize()));
         label4.setAlignmentX(Component.LEFT_ALIGNMENT);
         panel.add(label4);
+        setTitle("Homework Exporter");
     }
 
     @Nullable
@@ -77,6 +78,7 @@ public class MyDialogWrapper extends DialogWrapper {
     @Override
     protected void doOKAction() {
         if(getOKAction().isEnabled()) {
+            project.save();
             if (filefield.getText() != null) {
                 getOKAction().setEnabled(false);
                 label4.setText("Processing...Please wait");
@@ -86,6 +88,7 @@ public class MyDialogWrapper extends DialogWrapper {
                     Messages.showInfoMessage(project,"Done!","Info");
                     close(OK_EXIT_CODE);
                 } else {
+                    getOKAction().setEnabled(true);
                     label4.setText("");
                     Messages.showErrorDialog(project,"Something went wrong...","Oops");
                 }
