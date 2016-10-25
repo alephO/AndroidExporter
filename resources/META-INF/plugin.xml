@@ -2,7 +2,7 @@
   <id>me.aleph0.androidexporter</id>
   <name>Android Project Exporter</name>
   <version>0.0.1</version>
-  <vendor email="card.aleph1@gmail.com" url="http://www.yourcompany.com">Jialong Chen</vendor>
+  <vendor email="card.aleph1@gmail.com" url="https://github.com/alephO/AndroidExporter/issues">Jialong Chen</vendor>
 
   <description><![CDATA[
       Use this to export your homework.<br>
@@ -32,7 +32,7 @@
       <add-to-group group-id="MainMenu" anchor="last"  />
         <action id="HWExporter.Export" class="me.aleph0.androidexporter.ExportAction" text="_Export for submission"
             description="Export your homework for submission">
-        <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl E"/>
+        <keyboard-shortcut keymap="$default" first-keystroke="alt E"/>
     </action>
     </group>
   </actions>
