@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>me.aleph0.androidexporter</id>
   <name>Android Project Exporter</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <vendor email="card.aleph1@gmail.com" url="https://github.com/alephO/AndroidExporter/issues">Jialong Chen</vendor>
 
   <description><![CDATA[
@@ -9,7 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial prototype.<br>
+      Hotfix - integration bug fixed from Win to Unix<br>
     ]]>
   </change-notes>
 

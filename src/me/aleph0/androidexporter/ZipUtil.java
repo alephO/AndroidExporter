@@ -27,7 +27,7 @@ public class ZipUtil {
             zos = new ZipOutputStream(fos);
             FileInputStream in = null;
             for(int i = 0; i < fileList.size(); i++){
-                ZipEntry zipEntry= new ZipEntry(relativeList.get(i));
+                ZipEntry zipEntry= new ZipEntry(relativeList.get(i).replace(File.separator,"/"));
                 zos.putNextEntry(zipEntry);
                 try {
                     in = new FileInputStream(fileList.get(i));
@@ -41,7 +41,7 @@ public class ZipUtil {
                     in.close();
                 }
             }
-            ZipEntry zipEntry = new ZipEntry(new File(src).getName()+File.separator+"etc"+File.separator+"log"+File.separator+"compress.log");
+            ZipEntry zipEntry = new ZipEntry(new File(src).getName()+"/"+"etc"+"/"+"log"+"/"+"compress.log");
             zos.putNextEntry(zipEntry);
             byte[] data = log.toString().getBytes();
             zos.write(data, 0, data.length);
